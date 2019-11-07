@@ -22,7 +22,7 @@ s				result<br><br>
 "abcabcdede"			8<br>
 "abcabcabcabcdededededede"	14<br>
 "xababcdcdababcdcd"		17<br>
-<pre>
+</pre>
 
 ### 입출력 예 #1 ###
 >문자열을 1개 단위로 잘라 압축했을 때 가장 짧습니다.
