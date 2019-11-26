@@ -8,7 +8,7 @@ bool compare(vector<int> a, vector<int> b) {
 }
 
 int solution(vector<vector<int>> routes) {
-	int flag(-30001), ans(0);
+	int flag(-99999), ans(0);
 
 	sort(routes.begin(), routes.end(), compare);
 
