@@ -1,5 +1,6 @@
 ﻿/*
- * https://programmers.co.kr/learn/courses/30/lessons/42886
+ * problem site : https://programmers.co.kr/learn/courses/30/lessons/42886
+ * maveltoz code : https://github.com/kwak-bs/Study-for-CodingTest/blob/master/maveltoz/%EC%A0%80%EC%9A%B8.cpp
  */
 #include <string>
 #include <vector>
