@@ -1,5 +1,5 @@
 import java.util.Arrays;
-class Solution {
+class Boat {
     public static int solution(int[] people, int limit) {
 		Arrays.sort(people);
 		
