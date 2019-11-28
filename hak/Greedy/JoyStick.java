@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-class Solution {
+class JoyStick {
     static ArrayList<Integer> min;
 	public static int solution(String name) {
 		min = new ArrayList<Integer>();
