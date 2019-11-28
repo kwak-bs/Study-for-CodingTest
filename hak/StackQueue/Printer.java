@@ -3,6 +3,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 
+// 프린터
 public class Printer {
 	public static int solution(int[] priorities, int location) {
 		Queue<Integer> q = new LinkedList<>();					// 대기목록
