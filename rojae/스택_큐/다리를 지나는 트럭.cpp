@@ -61,7 +61,7 @@ int solution(int bridge_length, int weight, vector<int> truck_weights) {
 			// 그리고 그 무게를 다리가 버틸 수 있다면
 			if (remain >= truck_weights[moving + 1]) {
 				// 운반하는 화물 리스트에 넣어준다.
-				// 다리가 견디는 전체 무게 갱신
+				// 다리가 버티고 있는 무게를 갱신한다.
 				trucking.push_back({ truck_weights[++moving], bridge_length });
 				sum += truck_weights[moving];
 			}
