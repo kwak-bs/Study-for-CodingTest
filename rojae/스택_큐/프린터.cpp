@@ -1,12 +1,7 @@
 ﻿#include<iostream>
 #include<vector>
-#include<algorithm>
 
 using namespace std;
-
-bool cmp(pair<int,int> p1, pair<int,int> p2) {
-	return p1.second > p2.second;
-}
 
 int solution(vector<int> priorities, int location) {
 	vector<pair<int, int>> p;
