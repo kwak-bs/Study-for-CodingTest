@@ -1,0 +1,23 @@
+import java.util.Arrays;
+class Solution {
+    public static int solution(int[] people, int limit) {
+        int answer = 0;
+        int j = 0;
+        int i;
+        Arrays.sort(people);
+        for(i=people.length-1; i>j; i--) {
+        	if(people[i] + people[j] > limit) {
+        		answer++;
+        	}
+        	else {
+        		answer++;
+        		j++;
+        	}
+        }
+        if(i == j) {
+        	answer++;
+        }
+        System.out.println(answer);
+        return answer;
+    }
+}
