@@ -3,6 +3,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 
+// 다리를 지나는 트럭
 public class Truck {
 	public static int solution(int bridge_length, int weight, int[] truck_weights) {
 		Queue<Integer> bridge = new LinkedList<>();		// 다리를 지나는 트럭
