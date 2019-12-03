@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+import java.util.Collections;
+class Solution {
+    public static int solution(int[] citations) {
+        int answer = 0;
+        int h=0;
+        int yes =0;
+        int no = 0;
+        ArrayList<Integer> al = new ArrayList<Integer>(); //h를 저장
+        ArrayList<Integer> bl = new ArrayList<Integer>(); //size를 맞추기 위해 사용
+        
+       
+        while(true){ //최댓값을 구하기 위해 무한반복킈.
+        	h++; //h는 1부터 계속 증가시킴 
+        	for(int i=0; i<citations.length; i++) { //인용횟수 계산
+        		if(h <= citations[i] ) {
+        			yes++;
+        		}
+        		else {
+        			no++;
+        		}
+        	}
+        	if(h <= yes && h > no) { //인용 조건이 맞으면 al에 포함 
+           		al.add(h);
+           		Collections.sort(al); //요건 그ㅇㅇ 인용조건 맞은것들중 오름차순 정렬.
+           	} else { // 안맞으면 bl에 포함 
+           		bl.add(h);
+           	}
+        	if(al.size() + bl.size() == citations.length) { //둘이 같으면 break
+        		break;
+        	}
+        	yes = 0;
+        	no = 0;
+        }
+        if(al.size()>0) {
+        answer = al.get(al.size()-1);
+        }
+        System.out.println(answer);        
+        return answer;
+    }
+}
