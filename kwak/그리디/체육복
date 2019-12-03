@@ -1,0 +1,33 @@
+class Solution {
+    public static int solution(int n, int[] lost, int[] reserve) {
+	        int answer = 0;
+	        int count = 0;
+	        int lost_std = 0;
+	        //여벌의 옷을 가져온 친구가 도난 당했을 경우
+	        // answer = 전체 수 - 도난 당한 학생 수 + 여벌이 있는 학생 중 빌려줄 수 있는 학생 수 + 여벌이 있는 학생 중 도난 당한 학생 수  
+	        for(int i=0; i<lost.length; i++) {
+	        	for(int j=0; j<reserve.length; j++) {
+	        		if(lost[i] == reserve[j]) {
+	        			reserve[j] = -1;
+	        			lost[i] = -1;
+	        			lost_std++;
+	        			break;
+	        		}
+	        	}
+	        }
+	        
+	        //여벌의 옷을 가져온 친구가 도난 당하지 않을 경우
+	        for(int i=0; i<lost.length; i++) {
+	        	for(int j=0; j<reserve.length; j++) {
+	        		if(lost[i] == reserve[j]-1 || lost[i] == reserve[j]+1) {
+	        			count++;
+	        			reserve[j] = -1;
+	        			break;
+	        		}
+	        	}
+	        }
+	        answer = n - lost.length + lost_std + count;
+	        System.out.println(answer);
+	        return answer;
+	    }
+}
